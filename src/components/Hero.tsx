@@ -76,8 +76,8 @@ export const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-7xl md:text-[11rem] font-medium tracking-tighter leading-[0.85] mb-12 mix-blend-difference text-white"
         >
-          Pure <br />
-          <span className="italic font-serif text-neutral-500">Vision</span>
+          Hi, I'm <br />
+          <span className="italic font-serif text-neutral-500">Allen Kurian Thomas</span>
         </motion.h1>
         
         <motion.div 
@@ -92,7 +92,7 @@ export const Hero = () => {
           </p>
           <div className="w-px h-16 bg-white/10 hidden md:block" />
           <p className="md:text-left flex-1 leading-relaxed">
-            Based in San Francisco,<br />
+            Based in Kerala,Indian<br />
             working globally.
           </p>
         </motion.div>

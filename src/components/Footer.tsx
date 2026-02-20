@@ -38,7 +38,7 @@ export const Footer = () => {
 
                  <a href="mailto:hello@studio.com" className="group flex items-center gap-4 text-lg font-mono text-neutral-500 hover:text-white transition-colors pl-4">
                    <span className="w-2 h-2 rounded-full bg-green-500" />
-                   hello@studio.com
+                   allenkurianthomas02@gmail.com
                  </a>
               </div>
             </div>
@@ -48,7 +48,7 @@ export const Footer = () => {
                 <div>
                   <h4 className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-6">Socials</h4>
                   <ul className="space-y-4">
-                    {['Instagram', 'Twitter', 'LinkedIn', 'Awwwards'].map((social) => (
+                    {['Instagram', 'Twitter', 'LinkedIn'].map((social) => (
                       <li key={social}>
                         <a href="#" className="flex items-center gap-2 text-lg font-light text-neutral-400 hover:text-white transition-colors group">
                           {social}
@@ -77,11 +77,11 @@ export const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
             <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
-              © 2024 Studio Pure Vision.
+              © 2026 Allen Kurian Thomas.
             </p>
-            <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
+            {/* <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
               Designed by Figma Make
-            </p>
+            </p> */}
           </div>
         </div>
       </footer>

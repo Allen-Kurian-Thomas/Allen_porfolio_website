@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Projects } from './components/Projects';
-import { Services } from './components/Services';
-import { Footer } from './components/Footer';
-import { Navbar } from './components/Navbar';
-import { Work } from './components/Work';
-import { ProjectDetail } from './components/ProjectDetail';
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { motion, AnimatePresence } from "motion/react";
+import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Projects } from "./components/Projects";
+import { Services } from "./components/Services";
+import { Footer } from "./components/Footer";
+import { Navbar } from "./components/Navbar";
+import { Work } from "./components/Work";
+import { ProjectDetail } from "./components/ProjectDetail";
 
 // Preloader Component
 const Preloader = () => (
@@ -24,8 +29,10 @@ const Preloader = () => (
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       className="flex flex-col items-center gap-4"
     >
-      <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">ALEX.DESIGN</h1>
-      <motion.div 
+      <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
+        ALLEN KURIAN THOMAS
+      </h1>
+      <motion.div
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
         transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }}
@@ -44,7 +51,7 @@ const ScrollToTop = () => {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
     } else {
@@ -79,7 +86,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      
+
       <AnimatePresence mode="wait">
         {loading && <Preloader key="preloader" />}
       </AnimatePresence>
