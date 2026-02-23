@@ -31,7 +31,7 @@ export const ProjectDetail = () => {
           to="/work"
           className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-500 hover:text-white transition-colors mb-12"
         >
-          <ArrowLeft className="w-4 h-4" /> Back to Archive
+          <ArrowLeft className="w-4 h-4" /> Back to Work
         </Link>
 
         {/* Hero */}

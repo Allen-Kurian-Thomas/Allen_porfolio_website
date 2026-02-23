@@ -8,6 +8,7 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
+import { TechStack } from "./components/TechStack";
 import { Projects } from "./components/Projects";
 import { Services } from "./components/Services";
 import { Footer } from "./components/Footer";
@@ -66,6 +67,7 @@ const HomePage = () => (
   <>
     <Hero />
     <About />
+    <TechStack />
     <Projects />
     <Services />
     <Footer />

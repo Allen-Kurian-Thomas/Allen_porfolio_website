@@ -63,8 +63,8 @@ export const Hero = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs font-mono tracking-widest uppercase text-neutral-400">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
             Available for new projects
           </div>
@@ -92,7 +92,7 @@ export const Hero = () => {
           </p>
           <div className="w-px h-16 bg-white/10 hidden md:block" />
           <p className="md:text-left flex-1 leading-relaxed">
-            Based in Kerala,Indian<br />
+            Based in Kerala, Indian<br />
             working globally.
           </p>
         </motion.div>
