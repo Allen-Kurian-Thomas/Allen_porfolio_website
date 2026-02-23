@@ -181,7 +181,7 @@ export const About = () => {
               >
                 <img
                   src="allen img.png"
-                  alt="Workspace"
+                  alt="Allen Image"
                   className="w-full h-full object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

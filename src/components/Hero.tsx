@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -8,15 +8,20 @@ export const Hero = () => {
   const yText = useTransform(scrollY, [0, 500], [0, 200]);
   const yBg = useTransform(scrollY, [0, 500], [0, 100]);
   const opacityText = useTransform(scrollY, [0, 300], [1, 0]);
-  
+
   return (
-    <section ref={containerRef} className="relative h-screen flex items-center justify-center overflow-hidden px-6 bg-neutral-950">
-      
+    <section
+      ref={containerRef}
+      className="relative h-screen flex items-center justify-center overflow-hidden px-6 bg-neutral-950"
+    >
       {/* 1. Cinematic Grain & Gradient Background */}
-      <motion.div style={{ y: yBg }} className="absolute inset-0 z-0 pointer-events-none">
-        {/* Subtle Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.05] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-        
+      <motion.div
+        style={{ y: yBg }}
+        className="absolute inset-0 z-0 pointer-events-none"
+      >
+        {/* Subtle Noise Texture — inline CSS grain, no external request */}
+        <div className="hero-noise absolute inset-0 opacity-[0.05] mix-blend-overlay" />
+
         {/* Deep Atmospheric Glows - Boosted Visibility */}
         <div className="absolute top-[-20%] left-[20%] w-[60vw] h-[60vw] bg-violet-900/20 rounded-full blur-[120px] mix-blend-screen animate-pulse duration-[8000ms]" />
         <div className="absolute bottom-[-20%] right-[20%] w-[50vw] h-[50vw] bg-blue-900/20 rounded-full blur-[120px] mix-blend-screen animate-pulse duration-[10000ms]" />
@@ -28,13 +33,13 @@ export const Hero = () => {
       {/* 3. Precision Geometric Rings (The "Sleek" Animation) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         {/* Ring 1: Slow Clockwise - Increased Opacity */}
-        <motion.div 
+        <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
           className="absolute w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full border border-white/10 border-dashed opacity-50"
         />
         {/* Ring 2: Counter-Clockwise, Solid - Increased Opacity */}
-        <motion.div 
+        <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
           className="absolute w-[450px] h-[450px] md:w-[600px] md:h-[600px] rounded-full border border-white/10 opacity-40"
@@ -43,7 +48,7 @@ export const Hero = () => {
           <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
         </motion.div>
         {/* Ring 3: Large Outer Ring - Increased Opacity */}
-        <motion.div 
+        <motion.div
           animate={{ rotate: 180 }}
           transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
           className="absolute w-[800px] h-[800px] md:w-[1100px] md:h-[1100px] rounded-full border border-white/5 border-dotted opacity-50"
@@ -51,7 +56,7 @@ export const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <motion.div 
+      <motion.div
         style={{ y: yText, opacity: opacityText }}
         className="relative z-10 max-w-6xl mx-auto flex flex-col items-center text-center"
       >
@@ -70,44 +75,50 @@ export const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-7xl md:text-[11rem] font-medium tracking-tighter leading-[0.85] mb-12 mix-blend-difference text-white"
         >
           Hi, I'm <br />
-          <span className="italic font-serif text-neutral-500">Allen Kurian Thomas</span>
+          <span className="italic font-serif text-neutral-500">
+            Allen Kurian Thomas
+          </span>
         </motion.h1>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col md:flex-row items-center gap-6 md:gap-16 text-lg font-light text-neutral-400 max-w-4xl mx-auto"
         >
           <p className="md:text-right flex-1 leading-relaxed">
-            Redefining digital aesthetics with precision<br />
+            Redefining digital aesthetics with precision
+            <br />
             and interactive depth.
           </p>
           <div className="w-px h-16 bg-white/10 hidden md:block" />
           <p className="md:text-left flex-1 leading-relaxed">
-            Based in Kerala, Indian<br />
+            Based in Kerala, Indian
+            <br />
             working globally.
           </p>
         </motion.div>
       </motion.div>
 
       {/* Minimal Scroll Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }}
         className="absolute bottom-12 flex flex-col items-center gap-4"
       >
-        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-600">Scroll</span>
+        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-600">
+          Scroll
+        </span>
         <div className="w-[1px] h-24 bg-gradient-to-b from-transparent via-white/20 to-transparent overflow-hidden">
-          <motion.div 
+          <motion.div
             animate={{ y: [-100, 100] }}
             transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
             className="w-full h-1/2 bg-gradient-to-b from-transparent via-white to-transparent"

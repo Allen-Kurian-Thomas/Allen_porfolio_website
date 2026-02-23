@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,8 +13,17 @@ import { Projects } from "./components/Projects";
 import { Services } from "./components/Services";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
-import { Work } from "./components/Work";
-import { ProjectDetail } from "./components/ProjectDetail";
+
+// Lazy-load route-only pages — they are never needed on the initial render
+// and will be code-split into their own chunks automatically by Vite
+const Work = lazy(() =>
+  import("./components/Work").then((m) => ({ default: m.Work })),
+);
+const ProjectDetail = lazy(() =>
+  import("./components/ProjectDetail").then((m) => ({
+    default: m.ProjectDetail,
+  })),
+);
 
 // Preloader Component
 const Preloader = () => (
@@ -63,6 +72,13 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Thin fallback shown while a lazy chunk is loading
+const PageFallback = () => (
+  <div className="min-h-screen bg-neutral-950 flex items-center justify-center">
+    <div className="w-6 h-6 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+  </div>
+);
+
 const HomePage = () => (
   <>
     <Hero />
@@ -78,7 +94,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Intro animation duration
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -96,11 +111,13 @@ function App() {
       {!loading && (
         <div className="bg-neutral-950 min-h-screen text-white selection:bg-white/20">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/work/:slug" element={<ProjectDetail />} />
-          </Routes>
+          <Suspense fallback={<PageFallback />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/work/:slug" element={<ProjectDetail />} />
+            </Routes>
+          </Suspense>
         </div>
       )}
     </Router>
