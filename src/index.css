@@ -3173,3 +3173,45 @@ html {
       0% 0%;
   }
 }
+
+/* ── Custom Cursor ─────────────────────────────────────────────────────────── */
+
+/* Hide the native cursor site-wide */
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  background-color: white;
+  /* Only animate scale/opacity — never translate (that would lag the cursor) */
+  transition-property: scale, opacity;
+  transition-duration: 180ms;
+  transition-timing-function: ease-out;
+  /* Start small — JS sets the CSS `translate` individual property to move it */
+  scale: 0.3;
+  z-index: 99999;
+  will-change: translate, scale, opacity;
+}
+
+/* Grows over links / buttons */
+.custom-cursor.custom-cursor--link {
+  scale: 1;
+}
+
+/* Fades in once the mouse has moved */
+.custom-cursor.custom-cursor--init {
+  opacity: 1;
+}

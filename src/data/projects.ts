@@ -4,7 +4,7 @@ export const projects = [
     slug: "techyspot-llp",
     title: "TechySpot LLP",
     category: "Web Design, Web Development",
-    image: "https://images.unsplash.com/photo-1761125802333-d145773f4461?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwY29zbWV0aWMlMjBwYWNrYWdpbmclMjBhZXN0aGV0aWN8ZW58MXx8fHwxNzY1MjcwMzMyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "/TechySpot/logo.png",
     year: "2026",
     client: "TechySpot LLP",
     role: "Web Design, Web Development",

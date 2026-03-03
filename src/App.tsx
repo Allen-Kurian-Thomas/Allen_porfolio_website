@@ -13,6 +13,7 @@ import { Projects } from "./components/Projects";
 import { Services } from "./components/Services";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
+import { CustomCursor } from "./components/CustomCursor";
 
 // Lazy-load route-only pages — they are never needed on the initial render
 // and will be code-split into their own chunks automatically by Vite
@@ -102,6 +103,7 @@ function App() {
 
   return (
     <Router>
+      <CustomCursor />
       <ScrollToTop />
 
       <AnimatePresence mode="wait">
