@@ -82,7 +82,15 @@ export const Hero = () => {
           style={{ fontFamily: "'Bungee', sans-serif" }}
           className="text-7xl md:text-[11rem] font-black tracking-tight leading-[0.9] mb-12 text-white"
         >
-          <a href="#">Hi, I&apos;m <br /></a>
+          <a
+            href="#"
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            Hi, I&apos;m <br />
+          </a>
           <span
             style={{
               fontFamily: "'Bungee', sans-serif",
@@ -91,7 +99,9 @@ export const Hero = () => {
               color: "transparent",
             }}
           >
-            <a href="#">Allen Kurian Thomas</a>
+            <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+              Allen Kurian Thomas
+            </a>
           </span>
         </motion.h1>
 
