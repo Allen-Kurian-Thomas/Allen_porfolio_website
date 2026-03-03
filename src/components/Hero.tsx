@@ -79,11 +79,19 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-7xl md:text-[11rem] font-medium tracking-tighter leading-[0.85] mb-12 mix-blend-difference text-white"
+          style={{ fontFamily: "'Bungee', sans-serif" }}
+          className="text-7xl md:text-[11rem] font-black tracking-tight leading-[0.9] mb-12 text-white"
         >
-          Hi, I'm <br />
-          <span className="italic font-serif text-neutral-500">
-            Allen Kurian Thomas
+          <a href="#">Hi, I&apos;m <br /></a>
+          <span
+            style={{
+              fontFamily: "'Bungee', sans-serif",
+              WebkitTextStroke: "3px white",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+            }}
+          >
+            <a href="#">Allen Kurian Thomas</a>
           </span>
         </motion.h1>
 

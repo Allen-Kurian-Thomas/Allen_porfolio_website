@@ -1,12 +1,12 @@
 export const projects = [
   {
-    id: "techyspot-llp",
-    slug: "techyspot-llp",
-    title: "TechySpot LLP",
+    id: "GDK TechySpot LLP",
+    slug: "GDK TechySpot LLP",
+    title: "GDK TechySpot LLP",
     category: "Web Design, Web Development",
-    image: "/TechySpot/logo.png",
+    image: "/TechySpot/TechySpot_Logo.png",
     year: "2026",
-    client: "TechySpot LLP",
+    client: "GDK TechySpot LLP",
     role: "Web Design, Web Development",
     description: "",
     additionalContent: "",
