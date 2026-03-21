@@ -8,6 +8,7 @@ import {
   Mail,
   X,
   Send,
+  Coffee,
 } from "lucide-react";
 
 export const Footer = () => {
