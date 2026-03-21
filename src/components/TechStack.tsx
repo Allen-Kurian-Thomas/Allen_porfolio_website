@@ -25,8 +25,8 @@ const marqueeStyles = `
     will-change: transform;
     flex-shrink: 0;
   }
-  .ts-track--left  { animation: scroll-left  30s linear infinite; }
-  .ts-track--right { animation: scroll-right 30s linear infinite; }
+  .ts-track--left  { animation: scroll-left  60s linear infinite; }
+  .ts-track--right { animation: scroll-right 60s linear infinite; }
   .ts-row:hover .ts-track { animation-play-state: paused; }
   .ts-badge {
     display: flex;
@@ -143,6 +143,15 @@ const row1: Tech[] = [
     name: "Supabase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
   },
+  {
+    name: "Lovable",
+    icon: "https://lovable.dev/favicon.ico",
+  },
+  {
+    name: "Vercel",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+    invert: true,
+  },
 ];
 
 const row2: Tech[] = [
@@ -231,6 +240,15 @@ const row2: Tech[] = [
   {
     name: "Java",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "Lovable",
+    icon: "https://lovable.dev/favicon.ico",
+  },
+  {
+    name: "Vercel",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+    invert: true,
   },
 ];
 

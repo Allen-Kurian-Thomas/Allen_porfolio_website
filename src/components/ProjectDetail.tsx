@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { projects } from "../data/projects";
+import { ImageGallery } from "./ImageGallery";
 
 export const ProjectDetail = () => {
   const { slug } = useParams();
@@ -112,22 +113,26 @@ export const ProjectDetail = () => {
                 <p className="text-lg text-neutral-400 leading-relaxed mb-8">
                   {project.additionalContent}
                 </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-neutral-900 aspect-square rounded-sm overflow-hidden">
-                    <img
-                      src={project.image}
-                      className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
-                      alt="Detail 1"
-                    />
+                {project.imagegallery && project.imagegallery.length > 0 ? (
+                  <ImageGallery images={project.imagegallery} />
+                ) : (
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-neutral-900 aspect-square rounded-sm overflow-hidden">
+                      <img
+                        src={project.image}
+                        className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
+                        alt="Detail 1"
+                      />
+                    </div>
+                    <div className="bg-neutral-900 aspect-square rounded-sm overflow-hidden">
+                      <img
+                        src={project.image}
+                        className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
+                        alt="Detail 2"
+                      />
+                    </div>
                   </div>
-                  <div className="bg-neutral-900 aspect-square rounded-sm overflow-hidden">
-                    <img
-                      src={project.image}
-                      className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
-                      alt="Detail 2"
-                    />
-                  </div>
-                </div>
+                )}
               </div>
             )}
           </div>

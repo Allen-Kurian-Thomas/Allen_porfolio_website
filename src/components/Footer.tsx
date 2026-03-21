@@ -66,7 +66,7 @@ export const Footer = () => {
                   <ul className="space-y-4">
                     {[
                       { name: "Instagram", href: "#" },
-                      { name: "Twitter", href: "#" },
+                      // { name: "Twitter", href: "#" },
                       {
                         name: "LinkedIn",
                         href: "https://www.linkedin.com/in/allenkurianthomas/",
@@ -102,7 +102,7 @@ export const Footer = () => {
                       { label: "Contact", href: "#contact", download: false },
                       {
                         label: "Resume",
-                        href: "/Allen's Resume.pdf",
+                        href: "https://drive.google.com/file/d/10V1FjcGzCb0PoCnJsE82Qk69wcKI526n/view?usp=drive_link",
                         download: true,
                       },
                     ].map(({ label, href, download }) => (
@@ -131,9 +131,11 @@ export const Footer = () => {
             <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
               © 2026 Allen Kurian Thomas.
             </p>
-            {/* <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
-              Designed by Figma Make
-            </p> */}
+            <p className="font-mono text-xs uppercase tracking-widest text-neutral-600 flex items-center gap-1.5">
+              Built with{" "}
+              <Coffee className="w-3.5 h-3.5 inline text-neutral-500" />, bugs,
+              and a lot of ctrl+z
+            </p>
           </div>
         </div>
       </footer>

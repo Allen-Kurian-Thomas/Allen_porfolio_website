@@ -16,7 +16,7 @@ export const About = () => {
         setTimeout(() => el.classList.remove("animate"), 700);
       }
       const a = document.createElement("a");
-      a.href = "/Allen's Resume.pdf";
+      a.href = "https://drive.google.com/file/d/10V1FjcGzCb0PoCnJsE82Qk69wcKI526n/view?usp=drive_link";
       a.download = "Allen's Resume.pdf";
       a.style.display = "none";
       document.body.appendChild(a);

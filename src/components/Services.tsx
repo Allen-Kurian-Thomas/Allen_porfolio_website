@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Layout, Smartphone, Globe, Layers, Zap, Search } from "lucide-react";
+import { Layout, Code, Globe, Layers, Zap, Search } from "lucide-react";
 
 const services = [
   {
@@ -10,10 +10,10 @@ const services = [
       "Crafting intuitive interfaces that guide users effortlessly through digital journeys.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile First",
+    icon: Code,
+    title: "Software Development",
     description:
-      "Responsive experiences that feel native on every device and screen size.",
+      "Building robust, scalable software solutions with clean, maintainable code and modern best practices.",
   },
   {
     icon: Globe,
